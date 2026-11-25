@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+    --surface-canvas: #f7f6f2;
+    --surface-card: #ffffff;
+    --surface-subtle: #f1efe9;
+    --border-hairline: #e5e1d8;
+    --ink-primary: #14181f;
+    --ink-secondary: #5a616e;
+    --accent-navy: #1b365d;
+    --accent-brass: #9a7b3e;
+  }
+
+  .dark {
+    --surface-canvas: #0b0e14;
+    --surface-card: #121722;
+    --surface-subtle: #181f2d;
+    --border-hairline: #1f2838;
+    --ink-primary: #f1efea;
+    --ink-secondary: #949ba8;
+    --accent-navy: #3b5b8c;
+    --accent-brass: #d4af63;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--surface-canvas);
+    color: var(--ink-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.3);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 116, 139, 0.5);
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-serif-ecclesia {
+  font-family: var(--font-display);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes scanBeam {
+  0%, 100% {
+    transform: translateY(-90px);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateY(90px);
+    opacity: 0.9;
+  }
+}
+
+.animate-scanBeam {
+  animation: scanBeam 2.2s ease-in-out infinite;
+}

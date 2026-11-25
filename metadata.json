@@ -1,0 +1,6 @@
+{
+  "name": "EclésiaVoto - Gestão & Votação de Comissão",
+  "description": "Sistema de governança eclesiástica para Comissões Diretivas e Comissões de Nomeações: pautas, votação secreta com apuração automática, reconhecimento facial, eleições de ministérios e atas canônicas.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
